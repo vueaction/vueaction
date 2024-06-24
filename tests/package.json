@@ -1,0 +1,27 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "IMPLEMENTATION=javascript vitest --bail=1 --watch=false --disable-console-intercept",
+    "test:laravel": "IMPLEMENTATION=laravel vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vueaction/core": "workspace:^",
+    "@vueaction/javascript": "workspace:^",
+    "@vueaction/laravel": "workspace:^",
+    "vitest": "^1.6.0",
+    "vue": "^3.4.30",
+    "wretch": "^2.9.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "happy-dom": "^14.12.3",
+    "jsdom": "^24.1.0"
+  }
+}

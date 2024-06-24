@@ -1,0 +1,67 @@
+{
+  "name": "@vueaction/core",
+  "version": "0.0.1",
+  "description": "Core repository for contracts and implementations of VueAction",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jiti-fix": "find ./dist -type f -exec sed -i 's|file://||g' {} \\;",
+    "build": "unbuild",
+    "watch": "nodemon --ext ts,js --exec unbuild",
+    "dev": "unbuild --stub && pnpm jiti-fix",
+    "release": "pnpm build && bumpp --tag '@vueaction/core@v%s' && pnpm publish"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vueaction/core.git"
+  },
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "Luke Diebold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vueaction/core/issues"
+  },
+  "homepage": "https://github.com/vueaction/core#readme",
+  "keywords": [
+    "vue",
+    "orm",
+    "model"
+  ],
+  "dependencies": {
+    "deepmerge-ts": "^5.1.0",
+    "vue": "^3.4.30"
+  },
+  "peerDependencies": {
+    "vue": "^3.x"
+  },
+  "devDependencies": {
+    "@types/debounce": "^1.2.4",
+    "@types/deep-equal": "^1.0.4",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.5.0",
+    "nodemon": "^3.1.4",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.2",
+    "unbuild": "^3.0.0-rc.2"
+  }
+}

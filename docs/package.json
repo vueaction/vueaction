@@ -1,0 +1,17 @@
+{
+	"type": "module",
+	"scripts": {
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"preview": "vitepress preview"
+	},
+	"devDependencies": {
+		"vitepress": "^1.2.3"
+	},
+	"dependencies": {
+		"@vue/repl": "^4.2.1",
+		"@vueaction/core": "workspace:*",
+		"vue": "^3.4.30",
+		"vue-native-dialog": "^0.0.3"
+	}
+}

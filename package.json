@@ -1,0 +1,26 @@
+{
+	"type": "module",
+	"scripts": {},
+	"dependencies": {
+		"taze": "^0.13.8"
+	},
+	"engines": {
+		"node": "^20 || ^22",
+		"pnpm": ">= 9.4.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.5.0",
+		"@stylistic/eslint-plugin": "^2.2.2",
+		"@typescript-eslint/eslint-plugin": "^7.14.1",
+		"@typescript-eslint/parser": "^7.14.1",
+		"eslint": "^9.5.0",
+		"eslint-formatter-visualstudio": "^8.40.0",
+		"eslint-plugin-cypress": "^3.3.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-n": "^17.9.0",
+		"eslint-plugin-promise": "^6.2.0",
+		"eslint-plugin-vue": "^9.26.0",
+		"typescript-eslint": "^7.14.1"
+	},
+	"packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+}
