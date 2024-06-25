@@ -41,7 +41,7 @@ jobs:
       - name: Copy docs build to root
         run: |
           mkdir -p public/docs
-          cp -r docs/dist/* public/docs/
+          cp -r docs/.vitepress/dist/* public/docs/
 
       - name: Copy repl build to root
         run: |
