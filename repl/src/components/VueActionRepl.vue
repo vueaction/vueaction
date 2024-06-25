@@ -32,6 +32,7 @@ const previewOptions: ReplProps['previewOptions'] = {
 
 const store = useStore(
   {
+    typescriptVersion: ref('5.5.2'),
     builtinImportMap: importMapComputed,
     vueVersion,
     template: ref({
