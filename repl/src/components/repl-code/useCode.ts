@@ -11,12 +11,13 @@ const javascriptDriver = createJavascript({
 })
 
 const vueAction = createVueAction({
-  default: 'default',
+  default: 'javascript',
   drivers: {
-    default: {
+    javascript: {
       driver: javascriptVueActionDriver,
     },
   },
 })
+
 app.use(vueAction)
 app.use(javascriptDriver)

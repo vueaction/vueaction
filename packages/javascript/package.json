@@ -49,7 +49,7 @@
     "wretch": "^2.9.0"
   },
   "peerDependencies": {
-    "@vueaction/core": "workspace:^",
+    "@vueaction/core": "0.x",
     "vue": "^3.x"
   },
   "devDependencies": {
