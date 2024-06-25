@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js and corepack
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Setup pnpm
         run: corepack enable pnpm
@@ -38,18 +38,18 @@ jobs:
           pnpm run build
           cd ..
 
+      - name: Copy docs build to root
+        run: |
+          mkdir -p public/docs
+          cp -r docs/dist/* public/docs/
+
+      - name: Copy repl build to root
+        run: |
+          mkdir -p public/repl
+          cp -r repl/dist/* public/repl/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Specify the directory to publish
-
-      - name: Copy docs build to root
-        run: |
-          mkdir -p docs
-          cp -r docs/dist/* docs/
-
-      - name: Copy repl build to root
-        run: |
-          mkdir -p repl
-          cp -r repl/dist/* repl/
+          publish_dir: public
