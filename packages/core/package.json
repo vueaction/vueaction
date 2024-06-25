@@ -1,6 +1,6 @@
 {
   "name": "@vueaction/core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Core repository for contracts and implementations of VueAction",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -45,15 +45,12 @@
     "model"
   ],
   "dependencies": {
-    "deepmerge-ts": "^5.1.0",
     "vue": "^3.4.30"
   },
   "peerDependencies": {
     "vue": "^3.x"
   },
   "devDependencies": {
-    "@types/debounce": "^1.2.4",
-    "@types/deep-equal": "^1.0.4",
     "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
