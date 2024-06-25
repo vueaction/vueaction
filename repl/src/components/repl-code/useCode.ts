@@ -1,13 +1,11 @@
 // @ts-nocheck
 
+window.actions = {}
+
 const javascriptDriver = createJavascript({
   name: 'javascript',
   mockLatencyMs: 400,
-  actions: {
-    'change-password'() {
-      console.log('changing...')
-    },
-  },
+  actions: window.actions,
 })
 
 const vueAction = createVueAction({
@@ -21,5 +19,3 @@ const vueAction = createVueAction({
 
 app.use(vueAction)
 app.use(javascriptDriver)
-
-console.log(vueActionState)

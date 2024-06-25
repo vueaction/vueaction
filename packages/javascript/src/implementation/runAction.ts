@@ -3,6 +3,7 @@ import { Action as ActionType } from '@vueaction/core'
 import { RunActionConfig } from '@vueaction/core'
 import { JavascriptDriverOptions, javascriptState } from '../plugin/state'
 import { get } from '../utils/get'
+import { wait } from '../utils/wait'
 
 export async function runAction<
   T extends ActionType,
@@ -49,9 +50,12 @@ export async function runAction<
     actionExec = driverOptions.actions[Action.name] as ((payload?: Typings['payload']) => Typings['response'])
   }
 
+  if (driverOptions.mockLatencyMs) {
+    await wait(driverOptions.mockLatencyMs)
+  }
+
   try {
     const response = await actionExec(config?.payload, mergedConfig)
-    console.log(Action)
     Action.run?.onSuccess?.({ options: config?.options, payload: config?.payload, response })
     return {
       action: Action,
