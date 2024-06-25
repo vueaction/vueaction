@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/vueation/docs/',
+  base: '/vueaction/docs/',
   title: 'VueAction',
   description: 'Marrying vue to you backend actions',
   cleanUrls: true,
