@@ -4,12 +4,12 @@ import { UseActionConfigParam, UseActionReturn } from '../contracts/UseAction'
 import { ExtractUseActionTypings } from '../types/ExtractActionTypings'
 import { StandardErrors } from '../contracts/errors/StandardErrors'
 import { ValidationErrors } from '../contracts/errors/ValidationErrors'
-import { BeforeRunCallback, OnErrorCallback, OnFinallyCallback, OnStandardErrorCallback, OnSuccessCallback, OnValidationErrorCallback } from 'src/contracts/Callbacks'
+import { BeforeRunCallback, OnErrorCallback, OnFinallyCallback, OnStandardErrorCallback, OnSuccessCallback, OnValidationErrorCallback } from '../contracts/Callbacks'
 import { resolveDefaultOptions } from './resolveDefaultOptions'
 import { getMergedDriverConfig } from '../utils/getMergedDriverConfig'
 import { resolveDefaultPayload } from './resolveDefaultPayload'
 import { runAction } from '../actions/runAction'
-import { vueActionState } from 'src/plugin/state'
+import { vueActionState } from '../plugin/state'
 
 export function useActionImplementation<
   T extends ActionType,

@@ -1,6 +1,6 @@
 import { describe, beforeEach, it, expect, vi } from 'vitest'
 import { baseSetup } from '../baseSetup'
-import { runAction } from '@vueaction/core'
+import { runAction, vueActionState } from '@vueaction/core'
 import { ChangePasswordAction } from './ChangePasswordAction'
 import { javascriptSetups } from '../implementations/javascriptSetups'
 

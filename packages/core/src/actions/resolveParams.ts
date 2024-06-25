@@ -1,4 +1,4 @@
-import { RunActionConfig } from 'src/contracts/RunAction'
+import { RunActionConfig } from '../contracts/RunAction'
 import { Action } from '../contracts/Action'
 
 export function resolveParams(...params: any[]): {

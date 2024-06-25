@@ -6,7 +6,7 @@ import { javascriptVueActionDriver, createJavascript } from '@vueaction/javascri
 const app = createApp(App)
 
 const javascriptDriver = createJavascript({
-  name: '',
+  name: 'javascript',
   mockLatencyMs: 400,
   actions: {
     'change-password'() {

@@ -6,26 +6,26 @@ export const javascriptSetups: ImplementationSetups = {
   implementation: javascriptVueActionDriver,
 
   async setMockLatency(ms: number) {
-    javascriptState.default.mockLatencyMs = ms
+    javascriptState.javascript.mockLatencyMs = ms
   },
 
   async setMockValidationErrors(mockValidationErrors) {
-    javascriptState.default.mockValidationErrors = mockValidationErrors
+    javascriptState.javascript.mockValidationErrors = mockValidationErrors
   },
 
   async setMockStandardErrors(mockStandardErrors) {
-    javascriptState.default.mockStandardErrors = mockStandardErrors
+    javascriptState.javascript.mockStandardErrors = mockStandardErrors
   },
 
   async baseSetup(app, context) {
-    javascriptState.default = {}
+    javascriptState.javascript = {}
 
-    javascriptState.default.mockStandardErrors = undefined
-    javascriptState.default.mockValidationErrors = undefined
-    javascriptState.default.mockLatencyMs = 0
+    javascriptState.javascript.mockStandardErrors = undefined
+    javascriptState.javascript.mockValidationErrors = undefined
+    javascriptState.javascript.mockLatencyMs = 0
 
     const javascriptAction = createJavascript({
-      name: 'default',
+      name: 'javascript',
       actions: javascriptActions,
     })
 

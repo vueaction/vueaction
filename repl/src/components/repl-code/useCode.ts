@@ -21,3 +21,5 @@ const vueAction = createVueAction({
 
 app.use(vueAction)
 app.use(javascriptDriver)
+
+console.log(vueActionState)

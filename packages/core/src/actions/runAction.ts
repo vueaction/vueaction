@@ -5,7 +5,8 @@ import { Action as ActionType } from '../contracts/Action'
 import { ExtractRunActionTypings } from '../types/ExtractActionTypings'
 import { Response } from '../contracts/Response'
 import { vueActionState } from '../plugin/state'
-import { BeforeRunCallback, OnErrorCallback, OnFinallyCallback, OnStandardErrorCallback, OnSuccessCallback, OnValidationErrorCallback } from 'src/contracts/Callbacks'
+import { BeforeRunCallback, OnErrorCallback, OnFinallyCallback, OnStandardErrorCallback, OnSuccessCallback, OnValidationErrorCallback } from '../contracts/Callbacks'
+import { getDriverKey } from '../utils/getDriverKey'
 
 export type CallbackKind = 'beforeRun' |
   'onSuccess' |
@@ -92,11 +93,11 @@ export async function runAction<
   hasDriverConfig?: RunActionConfig<T>,
 ): Promise<Response<Typings['response'], T>> {
   const params = resolveParams(Action, config, hasDriverConfig)
-  const driver = typeof Action === 'string' ? Action : (params.config?.options as Typings['options'])?.driver
+  const driverKey = getDriverKey(typeof Action === 'string' ? Action : (params.config?.options as Typings['options'])?.driver)
 
-  const implementation = getImplementation('runAction', driver) as RunAction<T>
+  const implementation = getImplementation('runAction', driverKey) as RunAction<T>
 
-  const callbacks = makeCallbackArrays(driver, params.Action, params.config ?? {})
+  const callbacks = makeCallbackArrays(driverKey, params.Action, params.config ?? {})
 
   await runCallbacks(
     callbacks.beforeRun,

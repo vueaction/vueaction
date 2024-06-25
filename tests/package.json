@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vueaction/core": "workspace:^",
-    "@vueaction/javascript": "workspace:^",
+    "@vueaction/core": "0.0.x",
+    "@vueaction/javascript": "0.0.x",
     "@vueaction/laravel": "workspace:^",
     "vitest": "^1.6.0",
     "vue": "^3.4.30",

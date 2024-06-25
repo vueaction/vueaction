@@ -15,10 +15,10 @@ function getConfig() {
 }
 
 function getDriverConfig() {
-  if (!vueActionState.drivers.default.config) {
+  if (!vueActionState.drivers.javascript.config) {
     throw new Error('Config is undefined')
   }
-  return vueActionState.drivers.default.config
+  return vueActionState.drivers.javascript.config
 }
 
 describe('useAction', () => {

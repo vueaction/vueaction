@@ -14,6 +14,7 @@ export default [
       'quotes': ['warn', 'single', { avoidEscape: true }],
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
     },
   },
 ]

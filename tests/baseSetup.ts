@@ -10,17 +10,17 @@ export async function baseSetup(ctx) {
   await setups.baseSetup(app, ctx)
 
   const vueAction = createVueAction({
-    default: 'default',
+    default: 'javascript',
     drivers: {
-      default: {
-        implementation: setups.implementation,
+      javascript: {
+        driver: setups.implementation,
         config: { },
       },
     },
   })
 
   vueActionState.config = {}
-  vueActionState.drivers.default.config = {}
+  vueActionState.drivers.javascript.config = {}
 
   app.use(vueAction)
 }
