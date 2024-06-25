@@ -2,12 +2,6 @@
 outline: deep
 ---
 
-<script setup>
-import VueActionRepl from './VueActionRepl.vue'
-</script>
-
-<VueActionRepl />
-
 # Getting Started
 VueAction helps you **standardize**, and add types to your apps actions. You can usually think of an **action** as "a function that hits an api", though VueAction does have a wider scope than just backend APIs.
 
