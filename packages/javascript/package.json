@@ -1,6 +1,6 @@
 {
   "name": "@vueaction/javascript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "jiti-fix": "find ./dist -type f -exec sed -i 's|file://||g' {} \\;",
@@ -49,7 +49,7 @@
     "wretch": "^2.9.0"
   },
   "peerDependencies": {
-    "@vueaction/core": "0.x",
+    "@vueaction/core": "^0.0.x",
     "vue": "^3.x"
   },
   "devDependencies": {
