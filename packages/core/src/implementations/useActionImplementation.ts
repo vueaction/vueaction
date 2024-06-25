@@ -2,7 +2,6 @@ import { Ref, readonly, ref, toValue } from 'vue'
 import { Action as ActionType } from '../contracts/Action'
 import { UseActionConfigParam, UseActionReturn } from '../contracts/UseAction'
 import { ExtractUseActionTypings } from '../types/ExtractActionTypings'
-// import { getImplementation } from '../getImplementation'
 import { StandardErrors } from '../contracts/errors/StandardErrors'
 import { ValidationErrors } from '../contracts/errors/ValidationErrors'
 import { BeforeRunCallback, OnErrorCallback, OnFinallyCallback, OnStandardErrorCallback, OnSuccessCallback, OnValidationErrorCallback } from 'src/contracts/Callbacks'
@@ -10,6 +9,7 @@ import { resolveDefaultOptions } from './resolveDefaultOptions'
 import { getMergedDriverConfig } from '../utils/getMergedDriverConfig'
 import { resolveDefaultPayload } from './resolveDefaultPayload'
 import { runAction } from '../actions/runAction'
+import { vueActionState } from 'src/plugin/state'
 
 export function useActionImplementation<
   T extends ActionType,
@@ -18,8 +18,8 @@ export function useActionImplementation<
   Action: T,
   config?: UseActionConfigParam<T>,
 ): UseActionReturn<T> {
-  const driverResolved = config?.driver ?? 'default'
-  // const runAction = getImplementation<T, 'runAction'>('runAction', config?.driver ?? 'default')
+  const driverResolved = config?.driver ?? toValue(vueActionState.default) ?? 'default'
+
   const mergedConfig = {
     ...getMergedDriverConfig(driverResolved),
     ...(config ?? {}),

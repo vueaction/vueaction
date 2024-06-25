@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useAction, Action } from '@vueaction/core'
+import { useAction } from '@vueaction/core'
 import { ChangePasswordAction } from './ChangePasswordAction'
 
 const changePasswordAction = useAction(ChangePasswordAction)
