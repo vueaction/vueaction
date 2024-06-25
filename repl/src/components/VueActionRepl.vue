@@ -17,7 +17,7 @@ const importMapComputed = computed(() => {
   const importMapAll = importMap.value
   if(importMapAll.imports) {
     importMapAll.imports['@vueaction/core'] = 'https://cdn.jsdelivr.net/npm/@vueaction/core@0.0.5/dist/index.mjs?module'
-    importMapAll.imports['@vueaction/javascript'] = 'https://cdn.jsdelivr.net/npm/@vueaction/javascript@0.0.4/dist/index.mjs?module'
+    importMapAll.imports['@vueaction/javascript'] = 'https://cdn.jsdelivr.net/npm/@vueaction/javascript@0.0.5/dist/index.mjs?module'
   }
 
   return importMapAll

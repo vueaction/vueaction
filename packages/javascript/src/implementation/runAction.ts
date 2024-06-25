@@ -50,8 +50,8 @@ export async function runAction<
     actionExec = driverOptions.actions[Action.name] as ((payload?: Typings['payload']) => Typings['response'])
   }
 
-  if (mergedConfig.mockLatencyMs) {
-    await wait(mergedConfig.mockLatencyMs)
+  if (driverOptions.mockLatencyMs) {
+    await wait(driverOptions.mockLatencyMs)
   }
 
   try {

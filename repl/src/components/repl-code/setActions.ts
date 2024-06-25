@@ -1,6 +1,6 @@
-import { JavascriptDriverOptions } from '@vueactions/javascript'
+import { JavascriptDriverOptions } from '@vueaction/javascript'
 
 // This is purely for demonstation purposes.
-export function setActions(actions: JavascriptDriverOptions.actions) {
+export function setActions(actions: JavascriptDriverOptions['actions']) {
   Object.assign(window.actions, actions)
 }
