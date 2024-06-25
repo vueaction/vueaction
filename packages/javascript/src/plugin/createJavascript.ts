@@ -11,6 +11,7 @@ export const createJavascript = (
       javascriptState[options.name] = {
         name: options.name,
         actions: options.actions,
+        mockLatencyMs: options.mockLatencyMs,
       }
     },
   }

@@ -4,7 +4,7 @@ import { ChangePasswordAction } from './ChangePasswordAction'
 import { setActions } from './setActions'
 
 // This is for demonstation purposes. Rather than using a real API,
-// we map some functions that VueAction can use trigger.
+// we map some functions that VueAction can trigger.
 setActions({
   'change-password'() {
     console.log('changing password')
