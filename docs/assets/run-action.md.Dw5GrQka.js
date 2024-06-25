@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./chunks/framework.599OLJAm.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"run-action.md","filePath":"run-action.md"}'),n={name:"run-action.md"};function r(o,c,s,i,p,_){return a(),e("div")}const f=t(n,[["render",r]]);export{m as __pageData,f as default};
